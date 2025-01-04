@@ -1,0 +1,140 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  background: #edf1f4;
+}
+.calculadora{
+  position: relative;
+  width: 60%;
+  padding: 20px;
+  box-shadow: 15px 15px 20px rgba(0,0,0,0.1), inset -5px -5px 20px #fff;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 0 20px;
+  font-size: 2em;
+  font-weight: 500;
+}
+.calculadora .buttons {
+  position: relative;
+  display: grid;
+}
+
+.calculadora .buttons #value {
+  position: relative;
+  grid-column: span 4;
+  user-select: none;
+  overflow: none;
+  width: 100%;
+  text-align: end;
+  color: #5166d6;
+  height: 100px;
+  line-height: 100px;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 0 20px;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.calculadora .buttons span {
+  position: relative;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 20px #fff;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #666;
+  border: 2px solid #edf1f4;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+}
+
+.calculadora .buttons span:active {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #fff;
+  color: #f44336;
+}
+.calculadora .buttons span#limpar{
+  grid-column: span 2;
+  background-color: #f44336;
+  color: #fff;
+  border: 2px solid #edf1f4;
+}
+.calculadora .buttons span#mais{
+  grid-row: span 2;
+  background-color: #31a935;
+  color: #fff;
+  border: 2px solid #edf1f4;
+}
+.calculadora .buttons span#igual{
+  grid-column: span 2;
+  background-color: #2196f3;
+  color: #fff;
+  border: 2px solid #edf1f4;
+}
+.calculadora .buttons span#limpar:active,
+.calculadora .buttons span#mais:active,
+.calculadora .buttons span#igual:active{
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1), -5px -5px 10px #fff,
+  inset 5px 5px 10px rgba(0,0,0,0.1);
+}
+.toggleBtn{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #555;
+  border: 2px solid #edf1f4;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1), -5px -5px 10px #fff;
+  cursor: pointer;
+}
+.dark{
+  background-color: #282c2f;
+}
+.dark .calculadora{
+  background-color: #33393e;
+  box-shadow: 15px 15px 20px rgba(0,0,0,0.25), -15px -15px 20px rgba(0,0,0,0.1);
+}
+.dark .calculadora .buttons #value{
+  background: #33393e;
+  color: #eee;
+  box-shadow: inset 15px 15px 20px rgba(0,0,0,0.5), inset -15px -15px 20px rgba(255,255,255,0.1);
+}
+.dark .calculadora .buttons span{
+  color: #eee;
+  border: 2px solid #333;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.25), -5px -5px 10px rgba(255,255,255,0.1);
+}
+.dark .calculadora .buttons span:active{
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.25), inset -5px -5px 10px rgba(255,255,255,0.1);
+}
+.dark .calculadora .buttons span#limpar,
+.dark .calculadora .buttons span#mais,
+.dark .calculadora .buttons span#igual{
+  border: solid 2px #333;
+}
+.dark .calculadora .buttons span#limpar:active,
+.dark .calculadora .buttons span#mais:active,
+.dark .calculadora .buttons span#igual:active{
+  box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1);
+}
+.dark .toggleBtn{
+  background: #edf1f4;
+  border: 2px solid #333;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.25), -5px -5px 10px rgba(255,255,255,0.25);
+}
